@@ -8,7 +8,15 @@ export const FooterStyled = styled("footer")`
   padding: ${({ theme }) => theme.spacing(4)} 0;
 `;
 
-export const FooterContainer = styled(Container)``;
+export const FooterContainer = styled(Container)`
+  display: flex;
+  justify-content: space-between;
+  gap: ${({ theme }) => theme.spacing(2)};
+  flex-wrap: wrap;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    gap: ${({ theme }) => theme.spacing(5)};
+  }
+`;
 
 export const FooterTitle = styled((props) => (
   <Typography component={"h2"} variant={"body2"} {...props} />
@@ -17,6 +25,12 @@ export const FooterTitle = styled((props) => (
 `;
 
 export const AppList = styled("ul")`
+  display: flex;
   list-style-type: none;
   padding: 0;
+  gap: ${({ theme }) => theme.spacing()};
+
+  img {
+    width: 122px;
+  }
 `;
