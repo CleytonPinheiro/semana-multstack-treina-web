@@ -5,13 +5,11 @@ export const HeaderAppBar = styled(AppBar)`
   background-color: ${({ theme }) => theme.palette.background.paper};
   box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.05);
 
-    ${({theme}) => theme.breakpoints.up('md')}{
-
-  .Muitoolbar-root {
-    height: 100px;
-  }
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    .Muitoolbar-root {
+      height: 100px;
     }
-
+  }
 `;
 
 export const HeaderLogo = styled("img")``;
